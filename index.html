@@ -1,0 +1,120 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="imagex/png"
+            href="./src/images/icone-hscc.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Cadastro</title>
+        <link rel="stylesheet" href="src/css/main.css">
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+
+            <div class="main-content">
+                <img class="logo" src="src/images/logo.png" alt="logo">
+                <a class="pacientes-list" href="pacientes.html" target="blank">PACIENTES  <i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+
+            <div class="btn">
+                <h1 id="text_begin">Centro Cirúrgico e Centro Obstétrico</h1>
+                <button onclick="openModal()" id="new">Novo Paciente</i></button>
+            </div>
+            
+        </div>
+
+        <div class="divTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th id="name-config">Nome</th>
+                        <th id="age-config">Idade</th>
+                        <th id="medico-config">Médico</th>
+                        <th id="situation-config">Situação</th>
+                        <th id="room-config">Sala</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <footer class="footer">
+            <button id="btnClearAll">Remover todos os pacientes</button>
+        </footer>
+
+        <div class="modal-container">
+            <div class="modal">
+                <h1>Cadastro:</h1>
+                <form autocomplete="off">
+                    <label for="m-nome">Iniciais do nome:</label>
+                    <input id="m-nome" type="text" required maxlength="4"/>
+
+                    <label for="m-idade">Idade:</label>
+                    <input id="m-idade" type="number" required maxlength="2"/>
+
+                    <label for="m-medico">Médico:</label>
+                    <select id="m-medico" name="medico" required>
+                        <option value="ADRIANO DE AGUIAR">ADRIANO DE AGUIAR</option>
+                        <option value="ANDREI LEITE DE MORAIS">ANDREI LEITE DE MORAIS</option>
+                        <option value="CELIZE MARIA WEINERT">CELIZE MARIA WEINERT</option>
+                        <option value="CESAR D. DO NASCIMENTO JUNIOR">CESAR DUARTE DO NASCIMENTO JUNIOR</option>
+                        <option value="DICESAR TERNA DE CAMPOS">DICESAR TERNA DE CAMPOS</option>
+                        <option value="DOUGLAS RIBAS SCHUMANN">DOUGLAS RIBAS SCHUMANN</option>
+                        <option value="DRAUDY STEINER GALLOTTI">DRAUDY STEINER GALLOTTI</option>
+                        <option value="EDEGEFERSON ERIVALDO MEISTE">EDEGEFERSON ERIVALDO MEISTE</option>
+                        <option value="EDSON FLAVIO COLLA">EDSON FLAVIO COLLA</option>
+                        <option value="FELIPE MELLOTO GALLOTTI">FELIPE MELLOTO GALLOTTI</option>
+                        <option value="FERNANDO VOIGT">FERNANDO VOIGT</option>
+                        <option value="HAROLDO FERREIRA NETO">HAROLDO FERREIRA NETO</option>
+                        <option value="IGOR MATHEUS SHIKASHO NAGIMA">IGOR MATHEUS SHIKASHO NAGIMA</option>
+                        <option value="JULIANO BRASIL">JULIANO BRASIL</option>
+                        <option value="KARLA PATRICIA G. A. LOZASSO">KARLA PATRICIA G. A. LOZASSO</option>
+                        <option value="LUIZ ROBERTO EISENBERG PIRES">LUIZ ROBERTO EISENBERG PIRES</option>
+                        <option value="LUIZ ROBERTO SANTOS PIRES">LUIZ ROBERTO SANTOS PIRES</option>
+                        <option value="MARCELO GALLOTTI">MARCELO GALLOTTI</option>
+                        <option value="MARCELO SUSSENBACH">MARCELO SUSSENBACH</option>
+                        <option value="MARCOS CESAR SUSSENBACH">MARCOS CESAR SUSSENBACH</option>
+                        <option value="NATHAN VINICIUS MENDES PREHL">NATHAN VINICIUS MENDES PREHL</option>
+                        <option value="SAULO PINTO SABATINI">SAULO PINTO SABATINI</option>
+                        <option value="SURIA EL KOUBA GOMES">SURIA EL KOUBA GOMES</option>
+                        <option value="WILLIAN TERUO NAKANISHI">WILLIAN TERUO NAKANISHI</option>
+                    </select>
+
+                    <label for="m-situacao">Situação:</label>
+                    <select id="m-situacao" name="situacao" required>
+                        <option value="AGUARDANDO PROCEDIMENTO">AGUARDANDO PROCEDIMENTO</option>
+                        <option value="EM PROCEDIMENTO">EM PROCEDIMENTO</option>
+                        <option value="EM RECUPERAÇÃO">EM RECUPERAÇÃO</option>
+                    </select>
+
+                    <label for="m-sala">Sala:</label>
+                    <select id="m-sala" name="sala" required>
+                        <option value="SALA PRÉ PARTO">SALA PRÉ PARTO</option>
+                        <option value="SALA DE PARTO">SALA DE PARTO</option>
+                        <option value="SALA OPERATÓRIA 1">SALA OPERATÓRIA 1</option>
+                        <option value="SALA OPERATÓRIA 2">SALA OPERATÓRIA 2</option>
+                        <option value="SALA OPERATÓRIA 3">SALA OPERATÓRIA 3</option>
+                        <option value="SALA OPERATÓRIA 4">SALA OPERATÓRIA 4</option>
+                        <option value="SALA OPERATÓRIA 5">SALA OPERATÓRIA 5</option>
+                        <option value="SALA RECUPERAÇÃO PÓS ANESTÉSICA">SALA RECUPERAÇÃO</option>
+                    </select>
+
+                    <div class="btnModal">
+                        <button id="btnSalvar">Salvar</button>
+                        <button id="btnFechar">Fechar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="src/script/script.js"></script>
+    </body>
+
+</html>

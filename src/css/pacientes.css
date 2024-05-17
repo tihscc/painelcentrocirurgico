@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root{
+    --color-primary: #ffffff;
+    --color-secondary: #292929;
+    --color-primary-light: #e2e2e2;
+    --color-secondary-light: #686868;
+    --color-logo: #C1FF9B;
+    --color-2: #84C125;
+    --color-dark: #000000;
+    --color-buttons: rgb(36, 138, 253);
+    --border-color-buttons: rgb(36, 138, 253);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--color-primary-light);
+}
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--color-secondary);
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 300px; /* Ajuste conforme necessário */
+    margin-right: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+.larger-text {
+    font-size: 25px;
+    font-weight: 600;
+}
+table {
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--color-primary);
+    box-shadow: rgb(199, 197, 216) 4px 8px 9px -2px;
+    padding: 3px;
+    word-break: break-all;
+}
+thead {
+    font-weight: 100;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+tr {
+    border-bottom: 1px solid rgb(238, 235, 235)!important;
+}
+tbody tr td {
+    vertical-align: text-top;
+    padding: 6px;
+    max-width: 50px;
+    font-weight: bold;
+}
+thead tr th {
+    padding: 5px;
+    text-align: start;
+    margin-bottom: 50px;
+}
+
+tbody tr {
+    margin-bottom: 50px;
+}
+.clock{
+    display: flex;
+    gap: 5px;
+    margin-left: 450px;
+    background-color: var(--color-primary-light);
+    color: var(--color-secondary);
+    border-radius: 15px;
+    padding: 5px;
+}
+.clock span{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.clock span:not(:last-child)::after{
+    content: ":";
+    margin-bottom: 10px;
+    color: var(--color-secondary);
+}
+#name-config{
+    width: 75px;
+}
+#age-config{
+    width: 75px;
+}

@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root{
+    --color-primary: #ffffff;
+    --color-secondary: #292929;
+    --color-primary-light: #e2e2e2;
+    --color-secondary-light: #686868;
+    --color-logo: #C1FF9B;
+    --color-2: #84C125;
+    --color-dark: #000000;
+    --color-buttons: rgb(36, 138, 253);
+    --border-color-buttons: rgb(36, 138, 253);
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body{
+    background-color: var(--color-primary-light);
+}
+.wrapper{
+    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.wrapper .main-content{
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-secondary);
+    border-bottom: 1px solid #e0e4e8;
+    box-shadow: 0 5px 20px -10px #cdd1e1;
+    box-sizing: border-box;
+}
+.wrapper .main-content .header{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary);
+    font-size: 30px;
+    color: var(--color-secondary-light);
+}
+.wrapper .main-content .logo{
+    width: 200px;
+    margin-right: 40px;
+}
+.wrapper .main-content .pacientes-list{
+    margin-right: 170px;
+    border: 1px solid rgba(255, 255, 255, 0.747);
+    width: 200px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50px;
+    color: var(--color-primary);
+    cursor: pointer;
+    text-decoration: none;
+}
+.wrapper .main-content .pacientes-list img{
+    color: var(--color-dark);
+}
+.wrapper .btn{
+    width: auto;
+    display: inline-block;
+    align-items: center;
+    margin: 0;
+    margin-top: 5px;
+    display: flex;
+}
+.wrapper .btn button{
+    width: 200px;
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--color-2);
+    border-color: var(--border-color-buttons);
+    color: var(--color-dark);
+    border: 1px solid transparent;
+    padding: 5px;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 155px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.wrapper .btn button:hover{
+    background-color: #b8f358;
+    transition: 1s background;
+}
+.wrapper .btn h1 {
+    margin-left: 160px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    flex-grow: 1;
+}
+.divTable {
+    padding: 0;
+    box-sizing: border-box;
+    width: auto; 
+    height:inherit;
+    margin: 5px; 
+}
+.divTable #name-config{
+    width: 75px;
+}
+.divTable #age-config{
+    width: 75px;
+}
+.divTable #room-config{
+    width: 250px;
+}
+.divTable #situation-config{
+    width: 250px;
+}
+.divTable #medico-config{
+    width: 230px;
+}
+table {
+    font-family: "Open Sans", sans-serif;
+    width: 1400px;
+    margin: 0 auto;
+    background-color: var(--color-primary);
+    box-shadow: rgb(199, 197, 216) 4px 8px 9px -2px;
+    padding: 3px;
+    word-break: break-all;
+}
+
+thead {
+    font-weight: 100;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+tr {
+    border-bottom: 1px solid rgb(238, 235, 235)!important;
+}
+
+tbody tr td {
+    vertical-align: text-top;
+    padding: 6px;
+    max-width: 50px;
+    font-weight: bold;
+}
+
+thead tr th {
+    padding: 5px;
+    text-align: start;
+    margin-bottom: 50px;
+}
+
+tbody tr {
+    margin-bottom: 50px;
+}
+
+thead tr th.acao {
+    width: 100px!important;
+    text-align: center;
+}
+
+tbody tr td.acao {
+    text-align: center;
+    align-items: center;
+}
+
+.modal-container {
+    font-family: "Open Sans", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+  
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    gap: 15px;
+}
+.modal h1{
+    font-size: 25px;
+}
+.modal label {
+    font-size: 15px;
+    width: 100%;
+}
+.modal input {
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    padding: 5px;
+}
+.modal select{
+    width: 100%;
+    font-size: 17px;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    padding: 5px;
+}
+.modal select option{
+    font-size: 15px;
+}
+.modal .btnModal{
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+}
+.modal button {
+    width: 200px;
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--color-2);
+    border-color: var(--border-color-buttons);
+    color: var(--color-dark);
+    border: 1px solid transparent;
+    padding: 5px;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.modal button:hover{
+    background-color: #b8f358;
+    transition: 1s background;
+}
+.active {
+    display: flex;
+}
+
+.active .modal {
+    animation: modal .4s;
+}
+@keyframes modal {
+from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+}
+to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+}
+
+td button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+td button i {
+    font-size: 25px;
+}
+
+td button i:first-child {
+    margin-right: 10px;
+}
+.acao{
+    cursor: pointer;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer {
+    background-color: var(--color-secondary);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+#btnClearAll{
+    width: 300px;
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--color-2);
+    color: var(--color-dark);
+    border: 1px solid #b8f358;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+#btnClearAll:hover{
+    background-color: #b8f358;
+    transition: 1s background;
+}

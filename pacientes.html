@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="60">
+        <link rel="shortcut icon" type="imagex/png"
+            href="./src/images/icone-hscc.ico">
+        <link rel="stylesheet" href="src/css/pacientes.css">
+        <link rel="stylesheet" href="src/css/slides.css">
+        <link rel="stylesheet" href="src/css/clock.css">
+        <title>Pacientes</title>
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <div class="logo">
+                <img src="src/images/logo.png" alt="Logo">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li class="larger-text">Painel Centro Cirúrgico e Centro
+                        Obstétrico</li>
+                    <li>1 - Acompanhe através das
+                        iniciais do nome e da idade.</li>
+                    <li>2 - O painel é atualizado a cada 1 minuto</li>
+                </ul>
+            </div>
+            <div class="clock">
+                <div class="hour"></div>
+                <div class="min"></div>
+                <div class="sec"></div>
+            </div>
+        </nav>
+
+        <div class="divTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th id="name-config">Nome</th>
+                        <th id="age-config">Idade</th>
+                        <th>Médico</th>
+                        <th id="situation-config">Situação</th>
+                        <th id="room-config">Sala</th>
+                    </tr>
+                </thead>
+                <tbody id="pacientesTableBody">
+                    <!-- Aqui serão inseridos os dados dos pacientes -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="slider">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <input type="radio" name="slider" id="slide5">
+            <input type="radio" name="slider" id="slide6">
+            <input type="radio" name="slider" id="slide7">
+            <input type="radio" name="slider" id="slide8">
+            <input type="radio" name="slider" id="slide9">
+            <div id="slides">
+                <div id="overflow">
+                    <div class="inner">
+                        <div class="slide slide_1">
+                            <div class="slide-content">
+                                <img src="src/images/1.png" alt="1">
+                            </div>
+                        </div>
+                        <div class="slide slide_2">
+                            <div class="slide-content">
+                                <img src="src/images/2.png" alt="1">
+                            </div>
+                        </div>
+                        <div class="slide slide_3">
+                            <div class="slide-content">
+                                <img src="src/images/3.png" alt="1">
+                            </div>
+                        </div>
+                        <div class="slide slide_4">
+                            <div class="slide-content">
+                                <img src="src/images/4.png" alt="1">
+                            </div>
+                        </div>
+                        <div class="slide slide_5">
+                            <div class="slide-content">
+                                <img src="src/images/5.png" alt="1">
+                            </div>
+                        </div>
+                        <div class="slide slide_6">
+                            <div class="slide-content">
+                                <img src="src/images/6.png" alt="1">
+                            </div>
+                        </div>
+                        <div class="slide slide_7">
+                            <div class="slide-content">
+                                <img src="src/images/7.png" alt="1">
+                            </div>
+                        </div>
+                        <div class="slide slide_8">
+                            <div class="slide-content">
+                                <img src="src/images/8.png" alt="1">
+                            </div>
+                        </div>
+                        <div class="slide slide_9">
+                            <div class="slide-content">
+                                <img src="src/images/9.png" alt="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+                <label for="slide5"></label>
+                <label for="slide6"></label>
+                <label for="slide7"></label>
+                <label for="slide8"></label>
+                <label for="slide9"></label>
+            </div>
+        </div>
+
+        <script src="src/script/slides.js"></script>
+        <script src="src/script/script.js"></script>
+        <script src="src/script/clock.js"></script>
+    </body>
+</html>
